@@ -1,0 +1,35 @@
+{
+  "version": 8,
+  "name": "Empty Style",
+  "sources": {
+    "sw_bj": {
+      "type": "geojson",
+      "data": "https://phdbrianlee.github.io/bigdatanote/test/beijing_subway.geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "bj",
+      "type": "background",
+      "paint": {
+        "background-color": "rgba(212, 207, 207, 1)"
+      }
+    },
+    {
+      "id": "Subway",
+      "type": "line",
+      "source": "sw_bj",
+      "paint": {
+        "line-color": [
+          "concat",
+          "#",
+          [
+            "get",
+            "RWCOLOR"
+          ]
+        ]
+      }
+    }
+  ],
+  "id": "zf5stoiex"
+}
